@@ -20,9 +20,11 @@ public class Galeria {
         
         nevszerint.sort(String::compareToIgnoreCase);
         
+        System.out.println("Név szerint rendezve:\n");
         for (String string : nevszerint) {
             System.out.println(string);
             }
+        System.out.println("");
         }  
     
     public void targySzerintRend(){
@@ -33,10 +35,13 @@ public class Galeria {
         
         targyszerint.sort(String::compareToIgnoreCase);
         
+        System.out.println("Tárgy neve szerint rendezve:\n");
         for (String string : targyszerint) {
             System.out.println(string);
             }
-        }  
+        System.out.println("");
+        }
+        
 
     @Override
     public String toString() {

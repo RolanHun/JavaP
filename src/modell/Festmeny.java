@@ -7,14 +7,22 @@ import java.util.Date;
 public class Festmeny extends KiallitasiTargy{
     private String eleresiUt;
 
-    public Festmeny(String eleresiUt, Date letrehozas, String nev, String keszito) {
+    public Festmeny(String eleresiUt, int letrehozas, String nev, String keszito) {
         super(letrehozas, nev, keszito);
         this.eleresiUt = eleresiUt;
         letezik(eleresiUt);
     }
     
-    public Festmeny(Date letrehozas, String nev, String keszito) {
-        this("", letrehozas, nev, keszito);
+    public Festmeny(String nev, String keszito, String eleresiUt) {
+        this(eleresiUt, 20220101, nev, keszito);
+    }
+    
+    public Festmeny(int letrehozas, String nev, String keszito) {
+        this("nincs", letrehozas, nev, keszito);
+    }
+
+    public Festmeny(String nev, String keszito) {
+        this("nincs", 20220101, nev, keszito);
     }
     
     private void letezik(String path){
